@@ -8,6 +8,7 @@ import {
   AuthenticateController,
   LoginController,
 } from '@controllers/authenticate.controller'
+import { FetchRecentQuestionsController } from '@controllers/fetch-recente-questions.controller'
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import {
     CreateAccountController,
     AuthenticateController,
     LoginController,
+    FetchRecentQuestionsController,
   ],
   providers: [PrismaService],
 })
