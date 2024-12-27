@@ -9,6 +9,7 @@ import {
   LoginController,
 } from '@controllers/authenticate.controller'
 import { FetchRecentQuestionsController } from '@controllers/fetch-recente-questions.controller'
+import { CreateQuestionController } from '@controllers/create-question.controller'
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { FetchRecentQuestionsController } from '@controllers/fetch-recente-quest
   controllers: [
     CreateAccountController,
     AuthenticateController,
+    CreateQuestionController,
     LoginController,
     FetchRecentQuestionsController,
   ],
