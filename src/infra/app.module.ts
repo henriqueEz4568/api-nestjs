@@ -1,15 +1,10 @@
 import { Module } from '@nestjs/common'
 import { envSchema } from './env'
-import { PrismaService } from './prisma/prisma.service'
-import { CreateAccountController } from '@/infra/http/controllers/create-account.controller'
+import { PrismaService } from './database/prisma/prisma.service'
 import { ConfigModule } from '@nestjs/config'
 import { AuthModule } from '../auth/auth.module'
-import {
-  AuthenticateController,
-  LoginController,
-} from '@/infra/http/controllers/authenticate.controller'
-import { FetchRecentQuestionsController } from '@/infra/http/controllers/fetch-recente-questions.controller'
-import { CreateQuestionController } from '@/infra/http/controllers/create-question.controller'
+
+import { HttpModule } from './http/htt.module'
 
 @Module({
   imports: [
@@ -18,14 +13,15 @@ import { CreateQuestionController } from '@/infra/http/controllers/create-questi
       isGlobal: true,
     }),
     AuthModule,
+    HttpModule,
   ],
-  controllers: [
-    CreateAccountController,
-    AuthenticateController,
-    CreateQuestionController,
-    LoginController,
-    FetchRecentQuestionsController,
-  ],
+  // controllers: [
+  //   CreateAccountController,
+  //   AuthenticateController,
+  //   CreateQuestionController,
+  //   LoginController,
+  //   FetchRecentQuestionsController,
+  // ],
   providers: [PrismaService],
 })
 export class AppModule {}

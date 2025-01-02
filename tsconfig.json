@@ -22,6 +22,9 @@
       "@controllers/*": [
         "src/infra/http/controllers/*"
       ],
+      "@database/*": [
+        "src/infra/database"
+      ],
       "@/*": [
         "src/*"
       ]
