@@ -20,7 +20,7 @@
     "strict": true,
     "paths": {
       "@controllers/*": [
-        "src/controllers/*"
+        "src/infra/http/controllers/*"
       ],
       "@/*": [
         "src/*"

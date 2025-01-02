@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config'
 import { JwtModule } from '@nestjs/jwt'
 import { PassportModule } from '@nestjs/passport'
 import { JwtStrategy } from './jwt.strategy' // Importe a estratégia aqui
-import { Env } from 'src/env'
+import { Env } from '@/infra/env'
 
 @Module({
   imports: [
