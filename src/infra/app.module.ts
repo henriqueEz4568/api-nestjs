@@ -4,7 +4,7 @@ import { PrismaService } from './database/prisma/prisma.service'
 import { ConfigModule } from '@nestjs/config'
 import { AuthModule } from '../auth/auth.module'
 
-import { HttpModule } from './http/htt.module'
+import { HttpModule } from './http/http.module'
 
 @Module({
   imports: [
@@ -15,13 +15,7 @@ import { HttpModule } from './http/htt.module'
     AuthModule,
     HttpModule,
   ],
-  // controllers: [
-  //   CreateAccountController,
-  //   AuthenticateController,
-  //   CreateQuestionController,
-  //   LoginController,
-  //   FetchRecentQuestionsController,
-  // ],
+
   providers: [PrismaService],
 })
 export class AppModule {}
